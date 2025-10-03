@@ -67,7 +67,7 @@
     add the universal CSS selector to the styles below
 */
 /* ----- */
-span {
+* {
     font-family: var(--fonts);
     line-height: 1.3;
     color: var(--dk-gray);
@@ -309,7 +309,7 @@ span {
     select the h2 in the first section using the ID, tag name, and child/descendant selectors
 */
 /* ----- */
-image.h2 {
+#image.h2 {
     padding: 12px 0;
     background-color: var(--blue);
     color: var(--white);
@@ -324,7 +324,7 @@ image.h2 {
     select the h2 in the second section using the ID, tag name, and child/descendant selectors
 */
 /* ----- */
-{
+#nav.h2{
     padding: 12px 0;
     background-color: var(--green);
     color: var(--white);
@@ -336,7 +336,7 @@ image.h2 {
     select the unordered list in the navigation using the tag names and child/descendant selector
 */
 /* ----- */
-{
+nav.ul{
     display: block;
     list-style-type: none;
     padding: 0;
@@ -349,7 +349,7 @@ image.h2 {
     select the list items in the navigation using the tag names and child/descendant selector
 */
 /* ----- */
-{
+nav.li{
     display: block;
     width: 100%;
 }
@@ -360,7 +360,7 @@ image.h2 {
     select the anchor tags in the navigation using the tag names and child/descendant selectors
 */
 /* ----- */
-{
+nav.a{
     display: block;
     width: 90%;
     margin: 16px auto;
@@ -381,7 +381,7 @@ image.h2 {
     select the anchor tags in the navigation on hover using the tag names, pseudo-class, and child/descendant selectors
 */
 /* ----- */
-{
+a:hover{
     background-color: var(--white);
     color: var(--green);
     box-shadow: var(--box-shadow-sm);
@@ -396,7 +396,7 @@ image.h2 {
     select the h2 in the third section using the class name selector
 */
 /* ----- */
-{
+#form.h2{
     padding: 12px 0;
     background-color: var(--dv-fuchsia);
     color: var(--white);
@@ -408,7 +408,7 @@ image.h2 {
     select all of the inputs, labels, select dropdowns and text areas on the page by tag name
 */
 /* ----- */
-{
+input, label, textarea, select{
     display: block;
     width: 95%;
     margin: 0.5rem auto;
@@ -422,7 +422,7 @@ image.h2 {
     select all of the inputs and selects by tag name
 */
 /* ----- */
-{
+input, select{
     height: 2rem;
     border: 2px solid var(--dk-gray);
 }
@@ -433,7 +433,7 @@ image.h2 {
     select all of the inputs on focus (by tag name/pseudo-class) on the page
 */
 /* ----- */
-{
+input:focus{
     outline: 4px solid var(--orange);
     outline-offset: 2px;
     border: none;
@@ -445,7 +445,7 @@ image.h2 {
     select all of the inputs on focus (by tag name/pseudo-class) on the page
 */
 /* ----- */
-{
+input:focus{
     outline-color: var(--dv-dk-blue);
 }
 
@@ -455,7 +455,7 @@ image.h2 {
     select the labels in the form using the tag name/element selector
 */
 /* ----- */
-{
+label{
     font-size: 1.25rem;
     margin-top: 16px;
 }
@@ -466,7 +466,7 @@ image.h2 {
     select the spans in the form using the class name selector
 */
 /* ----- */
-{
+span{
     font-size: 1.5rem;
     font-weight: bold;
     display: inline;
@@ -479,7 +479,7 @@ image.h2 {
     select all of the submit buttons (by tag name/type attribute) on the page
 */
 /* ----- */
-{
+#submit-btn{
     display: block;
     margin: 32px auto 16px;
     width: 100%;
@@ -502,7 +502,7 @@ image.h2 {
     select all of the submit buttons on hover (by tag name/type attribute name) on the page
 */
 /* ----- */
-{
+#submit-btn:hover{
     box-shadow: var(--box-shadow-sm);
     color: var(--purple);
     background-color: var(--lt-gray);
@@ -514,7 +514,7 @@ image.h2 {
     select all of the submit buttons on focus (by tag name/type attribute/pseudo-class) on the page
 */
 /* ----- */
-{
+#submit-btn:focus{
     box-shadow: var(--box-shadow-sm);
     outline: 4px solid var(--dv-dk-blue);
     outline-offset: 1px;
@@ -529,7 +529,7 @@ image.h2 {
     select the h2 in the list styling section using the class name selector
 */
 /* ----- */
-{
+#list.h2{
     color: var(--blue);
 }
 
