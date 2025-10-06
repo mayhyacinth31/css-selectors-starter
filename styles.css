@@ -827,7 +827,7 @@ input[type=submit]:focus{
     select the first div in the border styling section using the ID, tag name and direct descendant selectors
   */
   /* ----- */
-#borders > div:first-child {
+#borders > div {
     width: 300px;
     height: 300px;
     margin: 16px auto;
@@ -840,7 +840,7 @@ input[type=submit]:focus{
     select the second div in the border styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-#borders div:nth-child(2) {
+#borders div div {
     width: 250px;
     height: 250px;
     border: 6px dotted var(--dv-orange);
@@ -864,7 +864,7 @@ input[type=submit]:focus{
     select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-#pseudo-els div:nth-child(4) {
+#borders div.lines {
     width: 150px;
     height: 150px;
     border: 6px double var(--dv-mint);
@@ -876,7 +876,7 @@ input[type=submit]:focus{
     select the last div in the more styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-#more div.inner{
+#borders div.final-box{
     width: 100px;
     height: 100px;
     border: 6px inset var(--dv-lt-blue);
