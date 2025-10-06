@@ -242,7 +242,7 @@ main {
     select the sections on the page that are direct descendants to the main by tag names and using the direct descendant selector
 */
 /* ----- */
-main.section {
+main > section {
     display: block;
     width: calc(100% - 2rem);
     max-width: calc(500px - 2rem);
@@ -278,7 +278,7 @@ p {
     select the images and SVGs by tag names
 */
 /* ----- */
-img {
+img, svg {
     display: block;
     width: 100%;
     height: auto;
@@ -309,7 +309,7 @@ span {
     select the h2 in the first section using the ID, tag name, and child/descendant selectors
 */
 /* ----- */
-#image.h2 {
+main > #image  h2 {
     padding: 12px 0;
     background-color: var(--blue);
     color: var(--white);
@@ -324,7 +324,7 @@ span {
     select the h2 in the second section using the ID, tag name, and child/descendant selectors
 */
 /* ----- */
-#nav.h2{
+main > #nav  h2{
     padding: 12px 0;
     background-color: var(--green);
     color: var(--white);
@@ -336,7 +336,7 @@ span {
     select the unordered list in the navigation using the tag names and child/descendant selector
 */
 /* ----- */
-nav.ul{
+nav ul{
     display: block;
     list-style-type: none;
     padding: 0;
@@ -349,7 +349,7 @@ nav.ul{
     select the list items in the navigation using the tag names and child/descendant selector
 */
 /* ----- */
-nav.li{
+nav li{
     display: block;
     width: 100%;
 }
@@ -360,7 +360,7 @@ nav.li{
     select the anchor tags in the navigation using the tag names and child/descendant selectors
 */
 /* ----- */
-nav.a{
+nav a{
     display: block;
     width: 90%;
     margin: 16px auto;
@@ -381,7 +381,7 @@ nav.a{
     select the anchor tags in the navigation on hover using the tag names, pseudo-class, and child/descendant selectors
 */
 /* ----- */
-a:hover{
+nav a:hover{
     background-color: var(--white);
     color: var(--green);
     box-shadow: var(--box-shadow-sm);
@@ -396,7 +396,7 @@ a:hover{
     select the h2 in the third section using the class name selector
 */
 /* ----- */
-#form.h2{
+.form-h2{
     padding: 12px 0;
     background-color: var(--dv-fuchsia);
     color: var(--white);
@@ -466,7 +466,7 @@ label{
     select the spans in the form using the class name selector
 */
 /* ----- */
-span{
+.third-h2{
     font-size: 1.5rem;
     font-weight: bold;
     display: inline;
@@ -479,7 +479,7 @@ span{
     select all of the submit buttons (by tag name/type attribute) on the page
 */
 /* ----- */
-#submit-btn{
+input[type=submit]{
     display: block;
     margin: 32px auto 16px;
     width: 100%;
@@ -502,7 +502,7 @@ span{
     select all of the submit buttons on hover (by tag name/type attribute name) on the page
 */
 /* ----- */
-#submit-btn:hover{
+input[type=submit]:hover{
     box-shadow: var(--box-shadow-sm);
     color: var(--purple);
     background-color: var(--lt-gray);
@@ -514,7 +514,7 @@ span{
     select all of the submit buttons on focus (by tag name/type attribute/pseudo-class) on the page
 */
 /* ----- */
-#submit-btn:focus{
+input[type=submit]:focus{
     box-shadow: var(--box-shadow-sm);
     outline: 4px solid var(--dv-dk-blue);
     outline-offset: 1px;
@@ -529,7 +529,7 @@ span{
     select the h2 in the list styling section using the class name selector
 */
 /* ----- */
-#list.h2{
+.blue-text{
     color: var(--blue);
 }
 
@@ -539,7 +539,7 @@ span{
     select the unordered list in the list styling container using the id and tag name selectors
 */
 /* ----- */
-{
+#list ul{
     display: block;
     width: fit-content;
     margin: 32px auto;
@@ -551,7 +551,7 @@ span{
     select all of the list items in the list styling container using the ID and tag name selectors
 */
 /* ----- */
-{
+#list li{
     font-size: 1.25rem;
     line-height: 1.35;
     margin-bottom: 8px;
@@ -564,7 +564,7 @@ span{
     select the bullets on the unordered list in the list styling section using the tag name and pseudo-class selectors
 */
 /* ----- */
-{
+#list li::marker{
     font-size: 3rem;
     content: "\2730";
 }
@@ -575,7 +575,7 @@ span{
     select the first list item in the list styling container using the ID, tag name, and pseudo-class selectors
 */
 /* ----- */
-{
+#list li:first-child{
     color: var(--purple);
 }
 
@@ -585,7 +585,7 @@ span{
     select the last list item in the list styling container using the ID, tag name, and pseudo-class selectors
 */
 /* ----- */
-{
+#list li:last-child{
     color: var(--dv-lt-blue);
 }
 
@@ -598,7 +598,7 @@ span{
     select all of the divs in the more styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-{
+#more nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -610,7 +610,7 @@ span{
     select the first div in the more styling section using the ID, tag name and direct descendant selectors
   */
   /* ----- */
-{
+#more div:first-child{
     width: 300px;
     height: 300px;
     background-color: var(--dv-red);
@@ -623,7 +623,7 @@ span{
     select the second div in the more styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-{
+#more div:nth-of-type(2){
     width: 250px;
     height: 250px;
     background-color: var(--dv-orange);
