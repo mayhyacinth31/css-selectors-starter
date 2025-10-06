@@ -163,6 +163,7 @@ h2 {
 h3 {
     font-size: 1.5rem;
     margin: 0.25rem;
+    text-align: center;
 }
 
 /* --------------- */
@@ -396,7 +397,7 @@ nav a:hover{
     select the h2 in the third section using the class name selector
 */
 /* ----- */
-.form-h2{
+#form.third-h2{
     padding: 12px 0;
     background-color: var(--dv-fuchsia);
     color: var(--white);
@@ -466,7 +467,7 @@ label{
     select the spans in the form using the class name selector
 */
 /* ----- */
-.third-h2{
+.required{
     font-size: 1.5rem;
     font-weight: bold;
     display: inline;
@@ -598,7 +599,7 @@ input[type=submit]:focus{
     select all of the divs in the more styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-#more nav{
+#more div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -610,7 +611,7 @@ input[type=submit]:focus{
     select the first div in the more styling section using the ID, tag name and direct descendant selectors
   */
   /* ----- */
-#more div:first-child{
+#more > div {
     width: 300px;
     height: 300px;
     background-color: var(--dv-red);
@@ -623,7 +624,7 @@ input[type=submit]:focus{
     select the second div in the more styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-#more div:nth-of-type(2){
+#more div div {
     width: 250px;
     height: 250px;
     background-color: var(--dv-orange);
@@ -647,7 +648,7 @@ input[type=submit]:focus{
     select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-#more div:nth-of-type(4){
+#more div.fourth {
     width: 150px;
     height: 150px;
     background-color: var(--dv-mint);
@@ -759,7 +760,7 @@ input[type=submit]:focus{
     select the table header cells in the table styles section using the element/tag name, descendant, and ID selectors
 */
 /* ----- */
-#table thead{ 
+#table th{ 
     background-color: var(--blue);
     color: var(--white);
 }
